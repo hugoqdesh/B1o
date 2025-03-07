@@ -1,5 +1,3 @@
-import { GlowEffect } from "@/components/ui/glow-effect";
-import { Lens } from "@/components/ui/lens";
 import Waitlist from "@/components/waitlist";
 import Image from "next/image";
 
@@ -9,28 +7,16 @@ export default function Home() {
 			<Waitlist />
 
 			<div className="mx-auto w-full max-w-5xl px-4 relative">
-				<div className="relative items-center justify-center rounded-xl border border-muted-foreground/30 bg-muted p-1.5 shadow-xl shadow-black/40 dark:shadow-xl dark:shadow-black/85 md:flex">
-					<GlowEffect
-						colors={["#0894FF", "#C959DD", "#FF2E54", "#FF9004"]}
-						mode="breathe"
-						blur="medium"
+				<div className="relative items-center justify-center rounded-xl bg-transparent p-1.5 md:flex">
+					<Image
+						src="/demo2.png"
+						alt="hero"
+						width={1920}
+						height={1440}
+						className="h-full w-full rounded-xl invert dark:invert-0 md:rounded-lg"
+						priority
+						unoptimized
 					/>
-					<Lens
-						zoomFactor={2}
-						lensSize={150}
-						isStatic={false}
-						ariaLabel="Zoom Area"
-					>
-						<Image
-							src="/demo.png"
-							alt="hero"
-							width={1920}
-							height={1440}
-							className="h-full w-full rounded-xl shadow-md shadow-black invert dark:invert-0 md:rounded-lg"
-							priority
-							unoptimized
-						/>
-					</Lens>
 				</div>
 			</div>
 		</main>
