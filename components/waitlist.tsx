@@ -70,8 +70,8 @@ const Waitlist = () => {
 				Minimal Links. Maximum Impact.
 			</h1>
 			<p className="text-sm md:text-base">
-				Take control of your links with B1o — an open-source, privacy-first
-				link-in-bio app designed for simplicity and customization.
+				B1o is an open-source, privacy-first link-in-bio app designed for
+				simplicity and customization.
 			</p>
 
 			<Form {...form}>
@@ -101,26 +101,11 @@ const Waitlist = () => {
 							type="submit"
 							disabled={isSubmitting}
 						>
-							Join early access
+							Join waitlist
 						</Button>
 					</div>
 				</form>
 			</Form>
-
-			<Link href="/" target="_blank">
-				<Button
-					className="group w-full md:w-80 cursor-pointer"
-					variant="secondary"
-				>
-					<Github className="-ms-1 opacity-60" size={16} aria-hidden="true" />
-					GitHub
-					<ArrowRightIcon
-						className="-me-1 opacity-60 transition-transform group-hover:translate-x-0.5"
-						size={16}
-						aria-hidden="true"
-					/>
-				</Button>
-			</Link>
 		</div>
 	);
 };
