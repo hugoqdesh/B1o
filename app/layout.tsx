@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 	subsets: ["latin"],
 });
 
-export const siteConfig: Metadata = {
+export const metadata: Metadata = {
 	title: "B1o",
 	description:
 		"Take control of your links with B1o — an open-source, privacy-first link-in-bio app designed for simplicity and customization.",

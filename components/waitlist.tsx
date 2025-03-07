@@ -9,8 +9,6 @@ import confetti from "canvas-confetti";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Link from "next/link";
-import { ArrowRightIcon, Github } from "lucide-react";
 
 const formSchema = z.object({
 	email: z.string().email().min(9),

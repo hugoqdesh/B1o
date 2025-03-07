@@ -1,5 +1,5 @@
-import { Lens } from "@/components/magicui/lens";
 import { GlowEffect } from "@/components/ui/glow-effect";
+import { Lens } from "@/components/ui/lens";
 import Waitlist from "@/components/waitlist";
 import Image from "next/image";
 
