@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 	title: "B1o",
 	description:
-		"Take control of your links with B1o — an open-source, privacy-first link-in-bio app designed for simplicity and customization.",
+		"B1o an open-source, privacy-first link-in-bio app designed for simplicity and customization.",
 	icons: {
 		icon: "/favicon.ico",
 	},
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "B1o",
 		description:
-			"Take control of your links with B1o — an open-source, privacy-first link-in-bio app designed for simplicity and customization.",
+			"B1o an open-source, privacy-first link-in-bio app designed for simplicity and customization.",
 		images: [
 			{
 				url: `/og-image.png`,
