@@ -28,6 +28,8 @@ export default function Home() {
 						width={1080}
 						height={1920}
 						className="w-full h-full"
+						unoptimized
+						priority
 					/>
 					<p className="-mt-12 lg:-mt-32 text-sm text-primary/60">
 						( current demo design )
