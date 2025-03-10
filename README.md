@@ -26,4 +26,4 @@ If you are interested in contributing to this project, please read the [contribu
 
 ## 📄 License
 
-B1o is under the [MPL 2.0 LICENSE](./LICENSE). All the code is open-source and free to use! Attribution is appreciated but not required.
+B1o is under the [MIT LICENSE](./LICENSE).
