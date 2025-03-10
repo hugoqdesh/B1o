@@ -9,6 +9,7 @@ import confetti from "canvas-confetti";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { BellRing, MailOpen } from "lucide-react";
 
 const formSchema = z.object({
 	email: z.string().email().min(9),
@@ -63,48 +64,44 @@ const Waitlist = () => {
 		}
 	};
 	return (
-		<div className="flex flex-col items-center justify-center text-center xl:items-start xl:justify-start xl:text-start gap-4 max-w-2xl w-full">
-			<h1 className="text-4xl md:text-6xl font-semibold">
-				Minimal Links. Maximum Impact.
-			</h1>
-			<p className="text-sm md:text-base">
-				B1o is an open-source, privacy-first link-in-bio app designed for
-				simplicity and customization.
-			</p>
-
-			<Form {...form}>
-				<form
-					onSubmit={form.handleSubmit(onSubmit)}
-					className="flex items-center gap-4"
-				>
-					<FormField
-						control={form.control}
-						name="email"
-						render={({ field }) => (
-							<FormItem>
-								<FormControl>
+		<Form {...form}>
+			<form
+				onSubmit={form.handleSubmit(onSubmit)}
+				className="flex items-center gap-4"
+			>
+				<FormField
+					control={form.control}
+					name="email"
+					render={({ field }) => (
+						<FormItem>
+							<FormControl>
+								<div className="relative">
 									<Input
 										type="email"
 										placeholder="you@example.com"
-										className="placeholder:text-sm md:w-80"
+										className="placeholder:text-sm md:w-80 peer ps-9"
 										{...field}
 									/>
-								</FormControl>
-							</FormItem>
-						)}
-					/>
-					<div>
-						<Button
-							className="cursor-pointer"
-							type="submit"
-							disabled={isSubmitting}
-						>
-							Join waitlist
-						</Button>
-					</div>
-				</form>
-			</Form>
-		</div>
+									<div className="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50">
+										<MailOpen size={16} aria-hidden="true" />
+									</div>
+								</div>
+							</FormControl>
+						</FormItem>
+					)}
+				/>
+				<div>
+					<Button
+						className="cursor-pointer flex items-center"
+						type="submit"
+						disabled={isSubmitting}
+					>
+						<BellRing />
+						Join waitlist
+					</Button>
+				</div>
+			</form>
+		</Form>
 	);
 };
 

@@ -1,24 +1,39 @@
+import Header from "@/components/header";
 import Waitlist from "@/components/waitlist";
 import Image from "next/image";
 
 export default function Home() {
 	return (
-		<main className="flex flex-col xl:flex-row gap-24 items-center xl:justify-between h-screen py-12 xl:py-0 px-10 xl:px-20 2xl:px-42">
-			<Waitlist />
+		<main className="max-w-7xl mx-auto">
+			<Header />
 
-			<div className="mx-auto w-full max-w-5xl px-4 relative">
-				<div className="relative items-center justify-center rounded-xl bg-transparent p-1.5 md:flex">
+			<section className="flex flex-col items-center justify-center text-center mt-12 md:mt-32 lg:mt-44 gap-4 md:gap-6 px-4">
+				<h1 className="text-4xl md:text-7xl font-semibold">
+					Minimal Links. Maximum Impact.
+				</h1>
+				<p className="max-w-2xl text-sm md:text-base">
+					B1o is an open-source, privacy-first link-in-bio app designed for
+					minimalism
+				</p>
+
+				<Waitlist />
+				<p className="text-sm -mt-2 md:-mt-4 text-primary/60">
+					sign up now and get early joiner benefits
+				</p>
+
+				<div>
 					<Image
-						src="/demo2.png"
-						alt="hero"
-						width={1920}
-						height={1440}
-						className="h-full w-full rounded-xl invert dark:invert-0 md:rounded-lg"
-						priority
-						unoptimized
+						src="/demo.png"
+						alt=""
+						width={1080}
+						height={1920}
+						className="w-full h-full"
 					/>
+					<p className="-mt-12 lg:-mt-32 text-sm text-primary/60">
+						( current demo design )
+					</p>
 				</div>
-			</div>
+			</section>
 		</main>
 	);
 }
