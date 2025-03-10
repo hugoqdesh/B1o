@@ -18,7 +18,7 @@ export default function Home() {
 
 				<Waitlist />
 				<p className="text-sm -mt-2 md:-mt-4 text-primary/60">
-					sign up now and get early joiner benefits
+					sign up now to get early benefits
 				</p>
 
 				<div>
