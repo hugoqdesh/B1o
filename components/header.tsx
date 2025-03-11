@@ -20,7 +20,7 @@ const Header = () => {
 			<div className="flex items-center gap-4">
 				<ModeToggle />
 				<Link href="https://github.com/hugoqdesh/b1o" target="_blank">
-					<Button className="flex items-center gap-1.5 cursor-pointer">
+					<Button className="flex items-center gap-1.5">
 						GitHub
 						<ArrowRight />
 					</Button>

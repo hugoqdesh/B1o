@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "B1o",
+	title: "B1o - Link in Bio",
 	description:
 		"B1o an open-source, privacy-first link-in-bio app designed for simplicity and customization.",
 	icons: {
@@ -23,16 +23,27 @@ export const metadata: Metadata = {
 	},
 	applicationName: "B1o",
 	creator: "@hugoqdesh",
+	authors: [
+		{
+			name: "hugoqdesh",
+			url: "https://hugoqdesh.lol/",
+		},
+	],
 	openGraph: {
 		title: "B1o",
 		description:
 			"B1o an open-source, privacy-first link-in-bio app designed for simplicity and customization.",
+		type: "website",
+		locale: "en_US",
+		url: "https://b1-o.vercel.app/",
+		siteName: "B1o",
 		images: [
 			{
 				url: `/og-image.png`,
 				width: 1200,
 				height: 630,
 				alt: "B1o",
+				type: "image",
 			},
 		],
 	},
@@ -54,7 +65,7 @@ export const metadata: Metadata = {
 		"Link in Bio Service",
 		"Web Application",
 	],
-	// metadataBase: new URL(""),
+	metadataBase: new URL("https://b1-o.vercel.app/"),
 };
 
 export default function RootLayout({

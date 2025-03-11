@@ -92,7 +92,7 @@ const Waitlist = () => {
 				/>
 				<div>
 					<Button
-						className="cursor-pointer flex items-center"
+						className="flex items-center"
 						type="submit"
 						disabled={isSubmitting}
 					>
