@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 	title: "B1o - Link in Bio",
 	description:
-		"B1o an open-source, privacy-first link-in-bio app designed for simplicity and customization.",
+		"B1o an open-source, privacy-first link-in-bio app designed for minimalism.",
 	icons: {
 		icon: "/favicon.ico",
 	},
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "B1o",
 		description:
-			"B1o an open-source, privacy-first link-in-bio app designed for simplicity and customization.",
+			"B1o an open-source, privacy-first link-in-bio app designed for minimalism.",
 		type: "website",
 		locale: "en_US",
 		url: "https://b1-o.vercel.app/",
