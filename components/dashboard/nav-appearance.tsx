@@ -1,6 +1,6 @@
 "use client";
 
-import { ChartNoAxesCombined, House, Link, Settings } from "lucide-react";
+import { Image, SquareRoundCorner, Type, Wallpaper } from "lucide-react";
 
 import {
 	SidebarGroup,
@@ -12,31 +12,31 @@ import {
 
 const links = [
 	{
-		title: "Dashboard",
+		title: "Profile Picture",
 		url: "#",
-		icon: House,
+		icon: Image,
 	},
 	{
-		title: "My Links",
+		title: "Background",
 		url: "#",
-		icon: Link,
+		icon: Wallpaper,
 	},
 	{
-		title: "Analytics",
+		title: "Button Style",
 		url: "#",
-		icon: ChartNoAxesCombined,
+		icon: SquareRoundCorner,
 	},
 	{
-		title: "Settings",
+		title: "Typography",
 		url: "#",
-		icon: Settings,
+		icon: Type,
 	},
 ];
 
-export function NavMain({}) {
+export function NavAppearance({}) {
 	return (
 		<SidebarGroup>
-			<SidebarGroupLabel>Home</SidebarGroupLabel>
+			<SidebarGroupLabel>Appearance</SidebarGroupLabel>
 			<SidebarMenu>
 				{links.map((item) => (
 					<SidebarMenuItem key={item.title}>

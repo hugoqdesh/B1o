@@ -9,23 +9,45 @@ import {
 	SidebarContent,
 	SidebarFooter,
 	SidebarHeader,
-	SidebarRail,
+	SidebarMenuButton,
 } from "@/components/ui/sidebar";
 import { ModeToggle } from "../mode-toggle";
+import { NavAppearance } from "./nav-appearance";
+import { Eye, HeartHandshake, MessageSquareShare } from "lucide-react";
+import { Button } from "../ui/button";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 	return (
-		<Sidebar collapsible="icon" {...props}>
+		<Sidebar collapsible="offcanvas" {...props}>
 			<SidebarHeader>
 				<NavUser />
+
+				<div className="flex items-center justify-center gap-2 mt-1">
+					<Button className="w-28">
+						<Eye className="h-4 w-4" />
+						Preview
+					</Button>
+					<Button variant="secondary" className="w-28">
+						<MessageSquareShare className="h-4 w-4" />
+						Share
+					</Button>
+				</div>
 			</SidebarHeader>
+
 			<SidebarContent>
 				<NavMain />
+				<NavAppearance />
 			</SidebarContent>
+
 			<SidebarFooter>
-				<ModeToggle />
+				<div className="flex">
+					<SidebarMenuButton className="cursor-pointer">
+						<HeartHandshake />
+						<span>Help & Support</span>
+					</SidebarMenuButton>
+					<ModeToggle />
+				</div>
 			</SidebarFooter>
-			<SidebarRail />
 		</Sidebar>
 	);
 }
