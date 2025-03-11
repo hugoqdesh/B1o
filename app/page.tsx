@@ -1,5 +1,5 @@
-import Header from "@/components/header";
-import Waitlist from "@/components/waitlist";
+import Header from "@/components/landing-page/header";
+import Waitlist from "@/components/landing-page/waitlist";
 import Image from "next/image";
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
 				</p>
 
 				<Waitlist />
-				<p className="text-sm -mt-2 md:-mt-4 text-primary/60">
+				<p className="text-sm -mt-2 md:-mt-4 text-muted-foreground">
 					sign up now to get early benefits
 				</p>
 
@@ -34,7 +34,7 @@ export default function Home() {
 						unoptimized
 						priority
 					/>
-					<p className="-mt-12 lg:-mt-32 text-sm text-primary/60">
+					<p className="-mt-12 lg:-mt-32 text-sm text-muted-foreground">
 						( current demo design )
 					</p>
 				</div>

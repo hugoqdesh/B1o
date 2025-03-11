@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "./ui/button";
-import { ModeToggle } from "./mode-toggle";
+import { Button } from "../ui/button";
+import { ModeToggle } from "../mode-toggle";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 

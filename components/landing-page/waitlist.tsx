@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { Form, FormControl, FormField, FormItem } from "./ui/form";
-import { Input } from "./ui/input";
-import { Button } from "./ui/button";
+import { Form, FormControl, FormField, FormItem } from "../ui/form";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
 import { z } from "zod";
