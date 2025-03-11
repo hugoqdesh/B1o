@@ -1,16 +1,6 @@
 "use client";
 
-import {
-	BookOpen,
-	Bot,
-	ChartNoAxesCombined,
-	Cog,
-	House,
-	Link,
-	Settings,
-	Settings2,
-	SquareTerminal,
-} from "lucide-react";
+import { ChartNoAxesCombined, House, Link, Settings } from "lucide-react";
 
 import {
 	SidebarGroup,

@@ -7,7 +7,6 @@ import {
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
-	useSidebar,
 } from "@/components/ui/sidebar";
 
 const user = {
@@ -17,8 +16,6 @@ const user = {
 };
 
 export function NavUser({}) {
-	const { isMobile } = useSidebar();
-
 	return (
 		<SidebarMenu>
 			<SidebarMenuItem>
