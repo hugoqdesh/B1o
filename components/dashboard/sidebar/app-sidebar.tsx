@@ -11,7 +11,6 @@ import {
 	SidebarHeader,
 } from "@/components/ui/sidebar";
 import { ExternalLink, Eye, MessageSquareShare } from "lucide-react";
-import { Button } from "../ui/button";
 import {
 	Dialog,
 	DialogContent,
@@ -21,9 +20,9 @@ import {
 	DialogTrigger,
 } from "@/components/ui/dialog";
 import { NavFooter } from "./nav-footer";
-import { Input } from "../ui/input";
 import Link from "next/link";
-import Copy from "./copy-url";
+import Copy from "../copy-url";
+import { Button } from "@/components/ui/button";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 	return (

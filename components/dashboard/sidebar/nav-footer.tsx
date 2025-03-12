@@ -1,14 +1,13 @@
 "use client";
 
-import { Gift, HeartHandshake, Settings } from "lucide-react";
-
+import { HeartHandshake, Settings } from "lucide-react";
 import {
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { ModeToggle } from "../mode-toggle";
 import Link from "next/link";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const links = [
 	// {

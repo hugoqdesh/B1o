@@ -1,12 +1,5 @@
 import React, { useId, useRef, useState } from "react";
-import { Label } from "../ui/label";
 import { Input } from "../ui/input";
-import {
-	Tooltip,
-	TooltipContent,
-	TooltipProvider,
-	TooltipTrigger,
-} from "../ui/tooltip";
 import { cn } from "@/lib/utils";
 import { CheckIcon, CopyIcon } from "lucide-react";
 import { Button } from "../ui/button";
