@@ -11,12 +11,6 @@ const Header = () => {
 				<span className="text-3xl">B1o.</span>
 			</Link>
 
-			{/* <div className="flex items-center gap-6">
-				<Link href="/"></Link>
-				<Link href="/"></Link>
-				<Link href="/"></Link>
-			</div> */}
-
 			<div className="flex items-center gap-4">
 				<ModeToggle />
 				<Link href="https://github.com/hugoqdesh/b1o" target="_blank">

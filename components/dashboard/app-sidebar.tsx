@@ -9,12 +9,21 @@ import {
 	SidebarContent,
 	SidebarFooter,
 	SidebarHeader,
-	SidebarMenuButton,
 } from "@/components/ui/sidebar";
-import { ModeToggle } from "../mode-toggle";
-import { NavAppearance } from "./nav-appearance";
-import { Eye, HeartHandshake, MessageSquareShare } from "lucide-react";
+import { ExternalLink, Eye, MessageSquareShare } from "lucide-react";
 import { Button } from "../ui/button";
+import {
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogHeader,
+	DialogTitle,
+	DialogTrigger,
+} from "@/components/ui/dialog";
+import { NavFooter } from "./nav-footer";
+import { Input } from "../ui/input";
+import Link from "next/link";
+import Copy from "./copy-url";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 	return (
@@ -27,26 +36,42 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 						<Eye className="h-4 w-4" />
 						Preview
 					</Button>
-					<Button variant="secondary" className="w-28">
-						<MessageSquareShare className="h-4 w-4" />
-						Share
-					</Button>
+					<Dialog>
+						<DialogTrigger asChild>
+							<Button variant="secondary" className="w-28">
+								<MessageSquareShare className="h-4 w-4" />
+								Share
+							</Button>
+						</DialogTrigger>
+
+						<DialogContent>
+							<DialogHeader>
+								<DialogTitle>Share your profile</DialogTitle>
+								<DialogDescription>
+									Get more views by sharing your b1o.me link across all
+									platforms
+								</DialogDescription>
+							</DialogHeader>
+							<div className="flex items-center justify-center gap-2">
+								<Copy />
+								<Link href="/dashboard">
+									<Button>
+										<ExternalLink />
+										<p>Open my Page</p>
+									</Button>
+								</Link>
+							</div>
+						</DialogContent>
+					</Dialog>
 				</div>
 			</SidebarHeader>
 
 			<SidebarContent>
 				<NavMain />
-				<NavAppearance />
 			</SidebarContent>
 
 			<SidebarFooter>
-				<div className="flex">
-					<SidebarMenuButton className="cursor-pointer">
-						<HeartHandshake />
-						<span>Help & Support</span>
-					</SidebarMenuButton>
-					<ModeToggle />
-				</div>
+				<NavFooter />
 			</SidebarFooter>
 		</Sidebar>
 	);

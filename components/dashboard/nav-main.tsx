@@ -1,6 +1,6 @@
 "use client";
 
-import { ChartNoAxesCombined, House, Link, Settings } from "lucide-react";
+import { ChartNoAxesCombined, House, Link2, UserRoundPen } from "lucide-react";
 
 import {
 	SidebarGroup,
@@ -9,27 +9,28 @@ import {
 	SidebarMenuButton,
 	SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import Link from "next/link";
 
 const links = [
 	{
 		title: "Dashboard",
-		url: "#",
+		url: "/dashboard",
 		icon: House,
 	},
 	{
-		title: "My Links",
-		url: "#",
-		icon: Link,
+		title: "Links",
+		url: "/dashboard/links",
+		icon: Link2,
+	},
+	{
+		title: "Customize",
+		url: "/dashboard/customize",
+		icon: UserRoundPen,
 	},
 	{
 		title: "Analytics",
-		url: "#",
+		url: "/dashboard/analytics",
 		icon: ChartNoAxesCombined,
-	},
-	{
-		title: "Settings",
-		url: "#",
-		icon: Settings,
 	},
 ];
 
@@ -40,10 +41,12 @@ export function NavMain({}) {
 			<SidebarMenu>
 				{links.map((item) => (
 					<SidebarMenuItem key={item.title}>
-						<SidebarMenuButton className="cursor-pointer">
-							<item.icon />
-							<span>{item.title}</span>
-						</SidebarMenuButton>
+						<Link href={item.url}>
+							<SidebarMenuButton className="cursor-pointer">
+								<item.icon />
+								<span>{item.title}</span>
+							</SidebarMenuButton>
+						</Link>
 					</SidebarMenuItem>
 				))}
 			</SidebarMenu>

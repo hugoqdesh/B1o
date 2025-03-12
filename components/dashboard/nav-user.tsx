@@ -11,7 +11,7 @@ import {
 
 const user = {
 	name: "hugoqdesh",
-	email: "bio.me/hugoqdesh",
+	email: "b1o.me/hugoqdesh",
 	avatar: "/white.jpg",
 };
 
