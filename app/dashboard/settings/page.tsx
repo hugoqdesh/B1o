@@ -19,6 +19,7 @@ import { Input } from "@/components/ui/input";
 export default function Page() {
 	return (
 		<div className="flex flex-col items-center justify-center max-w-2xl mx-auto gap-10 px-6 md:px-0">
+			{/* Edit username */}
 			<Card className="flex flex-col w-full">
 				<CardHeader>
 					<CardTitle>Change username</CardTitle>
@@ -37,6 +38,7 @@ export default function Page() {
 				</CardContent>
 			</Card>
 
+			{/* SEO settings */}
 			<Card className="flex flex-col w-full">
 				<CardHeader>
 					<CardTitle>SEO</CardTitle>
@@ -56,6 +58,7 @@ export default function Page() {
 				</CardContent>
 			</Card>
 
+			{/* Account deletion */}
 			<Card className="flex flex-col w-full">
 				<CardHeader>
 					<CardTitle>Delete your account</CardTitle>

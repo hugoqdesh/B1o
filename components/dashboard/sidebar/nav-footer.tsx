@@ -35,6 +35,7 @@ export function NavFooter({}) {
 					</Link>
 				</SidebarMenuItem>
 			))}
+
 			<div className="flex">
 				<Link href="/dashboard" className="w-full">
 					<SidebarMenuButton className="cursor-pointer">

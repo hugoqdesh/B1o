@@ -46,6 +46,8 @@ const Waitlist = () => {
 
 			form.reset();
 			console.log("Form submission successful");
+
+			// add confetti effect
 			confetti({
 				particleCount: 180,
 				spread: 120,

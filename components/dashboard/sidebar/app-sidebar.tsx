@@ -27,6 +27,7 @@ import { Button } from "@/components/ui/button";
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 	return (
 		<Sidebar collapsible="offcanvas" {...props}>
+			{/* sidebar header */}
 			<SidebarHeader>
 				<NavUser />
 
@@ -65,10 +66,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 				</div>
 			</SidebarHeader>
 
+			{/* main sidebar content */}
 			<SidebarContent>
 				<NavMain />
 			</SidebarContent>
 
+			{/* sidebar footer */}
 			<SidebarFooter>
 				<NavFooter />
 			</SidebarFooter>

@@ -13,6 +13,7 @@ import Link from "next/link";
 export default function Page() {
 	return (
 		<div className="relative min-h-screen w-full overflow-hidden">
+			{/* decoration icons */}
 			<div className="absolute inset-0 overflow-hidden">
 				<div className="absolute top-[15%] left-[20%] text-muted-foreground">
 					<Clover className="h-6 w-6" />
@@ -37,6 +38,7 @@ export default function Page() {
 				</div>
 			</div>
 
+			{/* main content */}
 			<div className="relative flex flex-col items-center justify-center min-h-screen z-99 max-w-sm mx-auto text-center gap-2">
 				<h1 className="font-semibold text-4xl">Welcome to B1o</h1>
 				<p className="text-muted-foreground">

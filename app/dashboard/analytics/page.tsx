@@ -5,8 +5,10 @@ import { Eye } from "lucide-react";
 export default function Page() {
 	return (
 		<div className="flex flex-col gap-6 px-6 md:px-20">
+			{/* basic views chart */}
 			<Chart />
 
+			{/* views in total all time */}
 			<Card className="grid grid-cols-2 items-center justify-center">
 				<CardHeader>
 					<CardTitle className="flex items-center justify-start gap-1">
