@@ -16,9 +16,9 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 
-export default function Page() {
+export default function SettingsPage() {
 	return (
-		<div className="flex flex-col items-center justify-center max-w-2xl mx-auto gap-10 px-6 md:px-0">
+		<main className="flex flex-col items-center justify-center max-w-2xl mx-auto gap-10 px-6 md:px-0">
 			{/* Edit username */}
 			<Card className="flex flex-col w-full">
 				<CardHeader>
@@ -87,6 +87,6 @@ export default function Page() {
 					</Dialog>
 				</CardContent>
 			</Card>
-		</div>
+		</main>
 	);
 }

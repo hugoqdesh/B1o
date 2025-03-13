@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-export default function Page() {
+export default function WhatsNewPage() {
 	return (
-		<div className="flex flex-col items-center justify-center max-w-4xl mx-auto gap-3 px-6 md:px-0">
+		<main className="flex flex-col items-center justify-center max-w-4xl mx-auto gap-3 px-6 md:px-0">
 			<span className="text-muted-foreground text-sm">March 12, 2025</span>
 			<h1 className="font-semibold text-4xl">
 				Lorem ipsum dolor sit amet consectetur.
@@ -24,6 +24,6 @@ export default function Page() {
 				molestias quod! Iure doloribus suscipit magni facilis illum. Natus ad
 				harum, consequatur veritatis blanditiis quia iure quibusdam!
 			</p>
-		</div>
+		</main>
 	);
 }

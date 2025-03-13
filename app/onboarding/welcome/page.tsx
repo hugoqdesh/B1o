@@ -10,9 +10,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-export default function Page() {
+export default function WelcomePage() {
 	return (
-		<div className="relative min-h-screen w-full overflow-hidden">
+		<main className="relative min-h-screen w-full overflow-hidden">
 			{/* decoration icons */}
 			<div className="absolute inset-0 overflow-hidden">
 				<div className="absolute top-[15%] left-[20%] text-muted-foreground">
@@ -49,6 +49,6 @@ export default function Page() {
 					<Button>Get started</Button>
 				</Link>
 			</div>
-		</div>
+		</main>
 	);
 }

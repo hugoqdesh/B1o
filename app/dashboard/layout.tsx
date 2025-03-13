@@ -5,7 +5,7 @@ import {
 	SidebarTrigger,
 } from "@/components/ui/sidebar";
 
-export default function MailLayout({
+export default function DashboardLayout({
 	children,
 }: {
 	children: React.ReactNode;

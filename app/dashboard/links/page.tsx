@@ -28,7 +28,6 @@ import {
 import {
 	Dialog,
 	DialogContent,
-	DialogDescription,
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
@@ -41,7 +40,7 @@ import {
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-export default function Page() {
+export default function LinksPage() {
 	const icons = {
 		Snapchat,
 		Discord,
@@ -64,8 +63,8 @@ export default function Page() {
 	};
 
 	return (
-		<div className="px-6 md:px-0">
-			<Card className="max-w-7xl mx-auto">
+		<main className="max-w-7xl mx-auto px-6 md:px-0">
+			<Card>
 				<CardHeader>
 					<CardTitle>Link your social media profiles</CardTitle>
 					<CardDescription>
@@ -101,6 +100,6 @@ export default function Page() {
 					))}
 				</div>
 			</Card>
-		</div>
+		</main>
 	);
 }

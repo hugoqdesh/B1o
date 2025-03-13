@@ -1,7 +1,7 @@
-export default function Page() {
+export default function CustomizePage() {
 	return (
-		<div>
+		<main>
 			<div></div>
-		</div>
+		</main>
 	);
 }

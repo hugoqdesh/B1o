@@ -2,9 +2,9 @@ import { Chart } from "@/components/dashboard/chart";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Eye } from "lucide-react";
 
-export default function Page() {
+export default function AnalyticsPage() {
 	return (
-		<div className="flex flex-col gap-6 px-6 md:px-20">
+		<main className="flex flex-col gap-6 px-6 md:px-20">
 			{/* basic views chart */}
 			<Chart />
 
@@ -20,6 +20,6 @@ export default function Page() {
 					<p className="font-semibold">2,853</p>
 				</CardContent>
 			</Card>
-		</div>
+		</main>
 	);
 }
