@@ -10,39 +10,31 @@ import Link from "next/link";
 import { ModeToggle } from "@/components/mode-toggle";
 
 const links = [
-	// {
-	// 	title: "Whats new",
-	// 	url: "/dashboard/whats-new",
-	// 	icon: Gift,
-	// },
-	{
-		title: "Settings",
-		url: "/dashboard/settings",
-		icon: Settings,
-	},
+	{ title: "Settings", url: "/dashboard/settings", icon: Settings },
 ];
 
-export function NavFooter({}) {
+export function NavFooter() {
 	return (
 		<SidebarMenu>
 			{links.map((item) => (
 				<SidebarMenuItem key={item.title}>
-					<Link href={item.url}>
+					<Link href={item.url} aria-label={item.title}>
 						<SidebarMenuButton className="cursor-pointer">
-							<item.icon />
+							<item.icon size={18} aria-hidden="true" />
 							<span>{item.title}</span>
 						</SidebarMenuButton>
 					</Link>
 				</SidebarMenuItem>
 			))}
 
-			<div className="flex">
-				<Link href="#" className="w-full">
-					<SidebarMenuButton className="cursor-pointer">
-						<HeartHandshake />
+			<div className="flex items-center justify-between mt-2">
+				<Link href="#" className="w-full" aria-label="Help & Support">
+					<SidebarMenuButton className="cursor-pointer w-full">
+						<HeartHandshake size={18} aria-hidden="true" />
 						<span>Help & Support</span>
 					</SidebarMenuButton>
 				</Link>
+
 				<ModeToggle />
 			</div>
 		</SidebarMenu>

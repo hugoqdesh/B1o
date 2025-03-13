@@ -1,16 +1,19 @@
 "use client";
 
 import * as React from "react";
-
 import { NavMain } from "./nav-main";
 import { NavUser } from "./nav-user";
+import { NavFooter } from "./nav-footer";
+import Copy from "../copy-url";
+import Link from "next/link";
+
 import {
 	Sidebar,
 	SidebarContent,
 	SidebarFooter,
 	SidebarHeader,
 } from "@/components/ui/sidebar";
-import { ExternalLink, Eye, MessageSquareShare } from "lucide-react";
+
 import {
 	Dialog,
 	DialogContent,
@@ -19,29 +22,35 @@ import {
 	DialogTitle,
 	DialogTrigger,
 } from "@/components/ui/dialog";
-import { NavFooter } from "./nav-footer";
-import Link from "next/link";
-import Copy from "../copy-url";
-import { Button } from "@/components/ui/button";
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Eye, MessageSquareShare } from "lucide-react";
+
+export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
 	return (
 		<Sidebar collapsible="offcanvas" {...props}>
-			{/* sidebar header */}
+			{/* Sidebar Header */}
 			<SidebarHeader>
 				<NavUser />
 
+				{/* Preview & Share Buttons */}
 				<div className="flex items-center justify-center gap-2 mt-1">
-					<Link href="/demo" target="_blank">
+					{/* Preview Button */}
+					<Link href="/demo" target="_blank" aria-label="Preview your profile">
 						<Button className="w-28">
 							<Eye className="-ms-1 opacity-60" size={16} aria-hidden="true" />
 							Preview
 						</Button>
 					</Link>
 
+					{/* Share Button */}
 					<Dialog>
 						<DialogTrigger asChild>
-							<Button variant="secondary" className="w-28">
+							<Button
+								variant="secondary"
+								className="w-28"
+								aria-label="Share your profile link"
+							>
 								<MessageSquareShare
 									className="-ms-1 opacity-60"
 									size={16}
@@ -56,12 +65,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 								<DialogTitle>Share your profile</DialogTitle>
 								<DialogDescription>
 									Get more views by sharing your b1o.me link across all
-									platforms
+									platforms.
 								</DialogDescription>
 							</DialogHeader>
-							<div className="flex items-center justify-center gap-2">
+
+							<div className="flex items-center justify-center gap-2 mt-4">
 								<Copy />
-								<Link href="/demo" target="_blank">
+								<Link href="/demo" target="_blank" aria-label="Open your page">
 									<Button>
 										<ExternalLink
 											className="-ms-1 opacity-60"
@@ -77,12 +87,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 				</div>
 			</SidebarHeader>
 
-			{/* main sidebar content */}
+			{/* Main Sidebar Content */}
 			<SidebarContent>
 				<NavMain />
 			</SidebarContent>
 
-			{/* sidebar footer */}
+			{/* Sidebar Footer */}
 			<SidebarFooter>
 				<NavFooter />
 			</SidebarFooter>

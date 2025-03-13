@@ -1,7 +1,6 @@
 "use client";
 
 import { Globe } from "lucide-react";
-
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
 	SidebarMenu,
@@ -9,25 +8,40 @@ import {
 	SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-const user = {
+// User type definition for better type safety
+interface User {
+	name: string;
+	email: string;
+	avatar?: string;
+}
+
+const user: User = {
 	name: "demo",
 	email: "b1o.me/demo",
-	avatar: "/white.jpg",
+	avatar: "/white.jpg", // Path to the user's avatar image
 };
 
-export function NavUser({}) {
+export function NavUser() {
 	return (
 		<SidebarMenu>
 			<SidebarMenuItem>
-				<SidebarMenuButton size="lg">
+				<SidebarMenuButton size="lg" aria-label="User Profile">
 					<Avatar className="h-8 w-8 rounded-full">
-						<AvatarImage src={user.avatar} alt={user.name} />
-						<AvatarFallback className="rounded-lg">D</AvatarFallback>
+						<AvatarImage
+							src={user.avatar}
+							alt={user.name}
+							onError={(e) => (e.currentTarget.style.display = "none")}
+						/>
+						<AvatarFallback className="rounded-lg">
+							{user.name.charAt(0).toUpperCase()}
+						</AvatarFallback>
 					</Avatar>
+
 					<div className="grid flex-1 text-left text-sm leading-tight">
 						<span className="truncate font-semibold">{user.name}</span>
-						<div className="flex gap-0.5 items-center text-muted-foreground truncate text-xs">
-							<Globe size={13} />
+
+						<div className="flex items-center gap-0.5 text-muted-foreground truncate text-xs">
+							<Globe size={13} aria-hidden="true" />
 							<span>{user.email}</span>
 						</div>
 					</div>

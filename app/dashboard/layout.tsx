@@ -5,25 +5,28 @@ import {
 	SidebarTrigger,
 } from "@/components/ui/sidebar";
 
-export default function DashboardLayout({
-	children,
-}: {
+// Define the props for the DashboardLayout component.
+interface DashboardLayoutProps {
 	children: React.ReactNode;
-}) {
+}
+
+// DashboardLayout wraps the dashboard content with a sidebar provider,
+export default function DashboardLayout({ children }: DashboardLayoutProps) {
 	return (
-		<>
-			<SidebarProvider>
-				<AppSidebar />
+		<SidebarProvider>
+			{/* Sidebar component */}
+			<AppSidebar />
 
-				<SidebarInset>
-					{/* header for mobile to collapse and expand sidebar */}
-					<header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
-						<SidebarTrigger className="-ml-1 block md:hidden px-4" />
-					</header>
+			{/* SidebarInset wraps the main content and the mobile header */}
+			<SidebarInset>
+				{/* Mobile header with trigger for collapsing/expanding sidebar */}
+				<header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
+					<SidebarTrigger className="-ml-1 block md:hidden px-4" />
+				</header>
 
-					<div>{children}</div>
-				</SidebarInset>
-			</SidebarProvider>
-		</>
+				{/* Main dashboard content */}
+				<div>{children}</div>
+			</SidebarInset>
+		</SidebarProvider>
 	);
 }

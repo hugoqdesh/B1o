@@ -4,18 +4,23 @@ import { cn } from "@/lib/utils";
 import { CheckIcon, CopyIcon } from "lucide-react";
 import { Button } from "../ui/button";
 
-const Copy = () => {
+const Copy: React.FC = () => {
 	const id = useId();
-	const [copied, setCopied] = useState<boolean>(false);
 	const inputRef = useRef<HTMLInputElement>(null);
+	const [isCopied, setIsCopied] = useState(false);
 
-	const handleCopy = () => {
-		if (inputRef.current) {
-			navigator.clipboard.writeText(inputRef.current.value);
-			setCopied(true);
-			setTimeout(() => setCopied(false), 1500);
+	const handleCopyToClipboard = () => {
+		if (inputRef.current && navigator.clipboard) {
+			navigator.clipboard
+				.writeText(inputRef.current.value)
+				.then(() => {
+					setIsCopied(true);
+					setTimeout(() => setIsCopied(false), 1500);
+				})
+				.catch((error) => console.error("Failed to copy text:", error));
 		}
 	};
+
 	return (
 		<div className="relative w-full">
 			<Input
@@ -25,34 +30,30 @@ const Copy = () => {
 				type="text"
 				defaultValue="b1o.me/demo"
 				readOnly
+				aria-live="polite"
 			/>
+
 			<Button
 				size="icon"
 				variant="link"
-				onClick={handleCopy}
+				onClick={handleCopyToClipboard}
 				className="absolute inset-y-0 end-0"
-				disabled={copied}
+				disabled={isCopied}
+				aria-label="Copy to clipboard"
 			>
-				<div
-					className={cn(
-						"transition-all",
-						copied ? "scale-100 opacity-100" : "scale-0 opacity-0"
-					)}
-				>
+				{isCopied ? (
 					<CheckIcon
-						className="stroke-emerald-500"
+						className="stroke-emerald-500 transition-transform scale-100"
 						size={16}
 						aria-hidden="true"
 					/>
-				</div>
-				<div
-					className={cn(
-						"absolute transition-all",
-						copied ? "scale-0 opacity-0" : "scale-100 opacity-100"
-					)}
-				>
-					<CopyIcon size={16} aria-hidden="true" />
-				</div>
+				) : (
+					<CopyIcon
+						className="transition-transform scale-100"
+						size={16}
+						aria-hidden="true"
+					/>
+				)}
 			</Button>
 		</div>
 	);

@@ -11,43 +11,47 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { BellRing, MailOpen } from "lucide-react";
 
+// Validation schema using Zod
 const formSchema = z.object({
-	email: z.string().email().min(9),
+	email: z
+		.string()
+		.email({ message: "Invalid email address" })
+		.min(9, { message: "Email must be at least 9 characters" }),
 });
 
-const Waitlist = () => {
+const Waitlist: React.FC = () => {
 	const [isSubmitting, setIsSubmitting] = useState(false);
 
+	// Form initialization with react-hook-form and Zod resolver
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
-		defaultValues: {
-			email: "",
-		},
+		defaultValues: { email: "" },
 	});
 
-	const onSubmit = async (values: z.infer<typeof formSchema>) => {
+	// Handle form submission
+	const handleFormSubmit = async (values: z.infer<typeof formSchema>) => {
 		setIsSubmitting(true);
-		try {
-			console.log("Starting form submission with email:", values.email);
+		console.log("Submitting form with email:", values.email);
 
+		try {
 			const response = await fetch("/api/waitlist", {
 				method: "POST",
+				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({ email: values.email }),
-				headers: {
-					"Content-Type": "application/json",
-				},
 			});
 
 			if (!response.ok) {
 				const errorData = await response.json();
-				toast.error(errorData.message || "Something went wrong");
+				toast.error(
+					errorData.message || "Something went wrong. Please try again."
+				);
 				return;
 			}
 
 			form.reset();
 			console.log("Form submission successful");
 
-			// add confetti effect
+			// Confetti animation for successful submission
 			confetti({
 				particleCount: 180,
 				spread: 120,
@@ -65,10 +69,11 @@ const Waitlist = () => {
 			console.log("Form submission completed");
 		}
 	};
+
 	return (
 		<Form {...form}>
 			<form
-				onSubmit={form.handleSubmit(onSubmit)}
+				onSubmit={form.handleSubmit(handleFormSubmit)}
 				className="flex items-center gap-4"
 			>
 				<FormField
@@ -84,7 +89,7 @@ const Waitlist = () => {
 										className="placeholder:text-sm md:w-80 peer ps-9"
 										{...field}
 									/>
-									<div className="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50">
+									<div className="absolute inset-y-0 left-0 flex items-center pl-3 text-muted-foreground/80 pointer-events-none peer-disabled:opacity-50">
 										<MailOpen size={16} aria-hidden="true" />
 									</div>
 								</div>
@@ -92,11 +97,12 @@ const Waitlist = () => {
 						</FormItem>
 					)}
 				/>
+
 				<div>
 					<Button
-						className="flex items-center"
 						type="submit"
 						disabled={isSubmitting}
+						className="flex items-center"
 					>
 						<BellRing />
 						Join waitlist
