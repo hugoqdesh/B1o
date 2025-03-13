@@ -1,6 +1,5 @@
 import React, { useId, useRef, useState } from "react";
 import { Input } from "../ui/input";
-import { cn } from "@/lib/utils";
 import { CheckIcon, CopyIcon } from "lucide-react";
 import { Button } from "../ui/button";
 
