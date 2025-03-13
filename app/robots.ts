@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
 			allow: "/",
 			// disallow: "",
 		},
-		sitemap: "https://b1-o.vercel.app/sitemap.xml",
+		sitemap: "https://b1o.me/sitemap.xml",
 	};
 }

@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 			"B1o an open-source, privacy-first link-in-bio app designed for minimalism.",
 		type: "website",
 		locale: "en_US",
-		url: "https://b1-o.vercel.app/",
+		url: "https://b1o.me/",
 		siteName: "B1o",
 		images: [
 			{
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
 		"Link in Bio Service",
 		"Web Application",
 	],
-	metadataBase: new URL("https://b1-o.vercel.app/"),
+	metadataBase: new URL("https://b1o.me/"),
 };
 
 export default function RootLayout({
