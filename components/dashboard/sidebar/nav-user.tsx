@@ -10,8 +10,8 @@ import {
 } from "@/components/ui/sidebar";
 
 const user = {
-	name: "hugoqdesh",
-	email: "b1o.me/hugoqdesh",
+	name: "demo",
+	email: "b1o.me/demo",
 	avatar: "/white.jpg",
 };
 
@@ -25,7 +25,7 @@ export function NavUser({}) {
 				>
 					<Avatar className="h-8 w-8 rounded-full">
 						<AvatarImage src={user.avatar} alt={user.name} />
-						<AvatarFallback className="rounded-lg">CN</AvatarFallback>
+						<AvatarFallback className="rounded-lg">D</AvatarFallback>
 					</Avatar>
 					<div className="grid flex-1 text-left text-sm leading-tight">
 						<span className="truncate font-semibold">{user.name}</span>

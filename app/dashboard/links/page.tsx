@@ -79,7 +79,7 @@ export default function LinksPage() {
 									<TooltipProvider>
 										<Tooltip>
 											<TooltipTrigger asChild>
-												<div className="bg-primary/10 hover:bg-primary/15 flex items-center justify-center rounded-2xl w-max p-2 border-border border mx-auto cursor-pointer hover:-translate-y-1 transition duration-200">
+												<div className="bg-secondary hover:bg-primary/10 dark:bg-primary/80 hover:dark:bg-primary/60 flex items-center justify-center rounded-2xl w-max p-2 border-border border mx-auto cursor-pointer hover:-translate-y-1 transition duration-200">
 													<Icon className="w-10 h-10" />
 												</div>
 											</TooltipTrigger>

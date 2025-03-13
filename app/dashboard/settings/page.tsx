@@ -28,7 +28,7 @@ export default function SettingsPage() {
 				<CardContent>
 					<div className="flex flex-row gap-2">
 						<div className="relative w-full">
-							<Input className="peer ps-16" defaultValue="hugoqdesh" />
+							<Input className="peer ps-16" defaultValue="demo" />
 							<span className="text-muted-foreground pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-sm peer-disabled:opacity-50">
 								b1o.me/
 							</span>

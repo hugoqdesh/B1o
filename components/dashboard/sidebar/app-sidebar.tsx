@@ -32,10 +32,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 				<NavUser />
 
 				<div className="flex items-center justify-center gap-2 mt-1">
-					<Button className="w-28">
-						<Eye className="h-4 w-4" />
-						Preview
-					</Button>
+					<Link href="/demo" target="_blank">
+						<Button className="w-28">
+							<Eye className="h-4 w-4" />
+							Preview
+						</Button>
+					</Link>
+
 					<Dialog>
 						<DialogTrigger asChild>
 							<Button variant="secondary" className="w-28">
@@ -54,7 +57,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 							</DialogHeader>
 							<div className="flex items-center justify-center gap-2">
 								<Copy />
-								<Link href="/dashboard">
+								<Link href="/demo" target="_blank">
 									<Button>
 										<ExternalLink />
 										<p>Open my Page</p>

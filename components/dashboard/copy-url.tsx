@@ -23,7 +23,7 @@ const Copy = () => {
 				id={id}
 				className="pe-9"
 				type="text"
-				defaultValue="b1o.me/hugoqdesh"
+				defaultValue="b1o.me/demo"
 				readOnly
 			/>
 			<Button

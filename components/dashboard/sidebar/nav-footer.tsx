@@ -37,7 +37,7 @@ export function NavFooter({}) {
 			))}
 
 			<div className="flex">
-				<Link href="/dashboard" className="w-full">
+				<Link href="#" className="w-full">
 					<SidebarMenuButton className="cursor-pointer">
 						<HeartHandshake />
 						<span>Help & Support</span>
