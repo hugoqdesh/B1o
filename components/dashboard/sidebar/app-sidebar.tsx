@@ -34,7 +34,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 				<div className="flex items-center justify-center gap-2 mt-1">
 					<Link href="/demo" target="_blank">
 						<Button className="w-28">
-							<Eye className="h-4 w-4" />
+							<Eye className="-ms-1 opacity-60" size={16} aria-hidden="true" />
 							Preview
 						</Button>
 					</Link>
@@ -42,7 +42,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 					<Dialog>
 						<DialogTrigger asChild>
 							<Button variant="secondary" className="w-28">
-								<MessageSquareShare className="h-4 w-4" />
+								<MessageSquareShare
+									className="-ms-1 opacity-60"
+									size={16}
+									aria-hidden="true"
+								/>
 								Share
 							</Button>
 						</DialogTrigger>
@@ -59,8 +63,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 								<Copy />
 								<Link href="/demo" target="_blank">
 									<Button>
-										<ExternalLink />
-										<p>Open my Page</p>
+										<ExternalLink
+											className="-ms-1 opacity-60"
+											size={16}
+											aria-hidden="true"
+										/>
+										Open my Page
 									</Button>
 								</Link>
 							</div>

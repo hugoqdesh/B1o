@@ -39,6 +39,7 @@ import {
 	TooltipProvider,
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { PlusIcon } from "lucide-react";
 
 export default function LinksPage() {
 	const icons = {
@@ -93,8 +94,15 @@ export default function LinksPage() {
 								<DialogHeader>
 									<DialogTitle>{name} Social</DialogTitle>
 								</DialogHeader>
-								<Input placeholder="Add your link" />
-								<Button>Add</Button>
+								<Input placeholder="Paste your link" />
+								<Button variant="outline" className="max-sm:p-0">
+									<PlusIcon
+										className="opacity-60 sm:-ms-1"
+										size={16}
+										aria-hidden="true"
+									/>
+									<span className="max-sm:sr-only">Add</span>
+								</Button>
 							</DialogContent>
 						</Dialog>
 					))}

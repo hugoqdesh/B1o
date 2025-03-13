@@ -1,3 +1,13 @@
+import {
+	AlertDialog,
+	AlertDialogAction,
+	AlertDialogCancel,
+	AlertDialogContent,
+	AlertDialogDescription,
+	AlertDialogFooter,
+	AlertDialogHeader,
+	AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import {
 	Card,
@@ -15,6 +25,8 @@ import {
 	DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
+import { AlertDialogTitle } from "@radix-ui/react-alert-dialog";
+import { Save, Trash2 } from "lucide-react";
 
 export default function SettingsPage() {
 	return (
@@ -33,7 +45,10 @@ export default function SettingsPage() {
 								b1o.me/
 							</span>
 						</div>
-						<Button variant="secondary">Update</Button>
+						<Button variant="secondary">
+							<Save className="-ms-1 opacity-60" size={16} aria-hidden="true" />
+							Save
+						</Button>
 					</div>
 				</CardContent>
 			</Card>
@@ -53,8 +68,12 @@ export default function SettingsPage() {
 						<Input placeholder="Description (max 160 characters)" />
 					</div>
 					<Button variant="secondary" className="mt-2">
+						<Save className="-ms-1 opacity-60" size={16} aria-hidden="true" />
 						Save
 					</Button>
+					{/* <Button variant="secondary" className="mt-2">
+						Save
+					</Button> */}
 				</CardContent>
 			</Card>
 
@@ -69,22 +88,38 @@ export default function SettingsPage() {
 				</CardHeader>
 
 				<CardContent>
-					<Dialog>
-						<DialogTrigger asChild>
-							<Button variant="destructive">Delete Account</Button>
-						</DialogTrigger>
-						<DialogContent className="sm:max-w-[425px]">
-							<DialogHeader>
-								<DialogTitle>Delete your account</DialogTitle>
-								<DialogDescription>
+					<AlertDialog>
+						<AlertDialogTrigger asChild>
+							<Button variant="destructive">
+								<Trash2
+									className="-ms-1 opacity-60"
+									size={16}
+									aria-hidden="true"
+								/>
+								Delete Account
+							</Button>
+						</AlertDialogTrigger>
+						<AlertDialogContent>
+							<AlertDialogHeader>
+								<AlertDialogTitle>Delete your account</AlertDialogTitle>
+								<AlertDialogDescription>
 									Are you absolutely sure? Once deleted you will no longer be
 									able to have access on this account.
-								</DialogDescription>
-							</DialogHeader>
-
-							<Button variant="destructive">Delete Account</Button>
-						</DialogContent>
-					</Dialog>
+								</AlertDialogDescription>
+							</AlertDialogHeader>
+							<AlertDialogFooter>
+								<AlertDialogCancel>Cancel</AlertDialogCancel>
+								<Button variant="destructive">
+									<Trash2
+										className="-ms-1 opacity-60"
+										size={16}
+										aria-hidden="true"
+									/>
+									Delete Account
+								</Button>
+							</AlertDialogFooter>
+						</AlertDialogContent>
+					</AlertDialog>
 				</CardContent>
 			</Card>
 		</main>

@@ -29,7 +29,7 @@ export default function Home() {
 						alt="demo design"
 						width={1080}
 						height={1920}
-						className="w-full h-full"
+						className="w-full h-full select-none"
 						quality={100}
 						unoptimized
 						priority

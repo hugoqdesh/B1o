@@ -19,10 +19,7 @@ export function NavUser({}) {
 	return (
 		<SidebarMenu>
 			<SidebarMenuItem>
-				<SidebarMenuButton
-					size="lg"
-					className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
-				>
+				<SidebarMenuButton size="lg">
 					<Avatar className="h-8 w-8 rounded-full">
 						<AvatarImage src={user.avatar} alt={user.name} />
 						<AvatarFallback className="rounded-lg">D</AvatarFallback>
