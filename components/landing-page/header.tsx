@@ -12,8 +12,15 @@ const Header = () => {
 
 			<div className="flex items-center gap-4">
 				<Link href="https://github.com/hugoqdesh/b1o" target="_blank">
-					<Button className="flex items-center gap-1.5">
+					<Button variant="secondary" className="flex items-center gap-1.5">
 						GitHub
+						{/* <ArrowRight /> */}
+					</Button>
+				</Link>
+
+				<Link href="/demo" target="_blank">
+					<Button className="flex items-center gap-1.5">
+						Check Demo
 						<ArrowRight />
 					</Button>
 				</Link>

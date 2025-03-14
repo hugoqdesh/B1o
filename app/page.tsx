@@ -1,5 +1,6 @@
 import Header from "@/components/landing-page/header";
 import Waitlist from "@/components/landing-page/waitlist";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
 export default function Home() {
@@ -30,23 +31,6 @@ export default function Home() {
 				<p className="text-sm -mt-2 md:-mt-4 text-muted-foreground">
 					Sign up now to get early benefits.
 				</p>
-
-				{/* Demo Image */}
-				<div>
-					<Image
-						src="/demo.png"
-						alt="Preview of B1o demo design"
-						width={1080}
-						height={1920}
-						className="w-full h-full select-none"
-						quality={100}
-						priority
-						unoptimized
-					/>
-					<p className="-mt-12 lg:-mt-32 text-sm text-muted-foreground">
-						(Current demo design)
-					</p>
-				</div>
 			</section>
 		</main>
 	);
