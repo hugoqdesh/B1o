@@ -1,35 +1,37 @@
+import Content from "@/components/landing-page/content";
+import FAQ from "@/components/landing-page/faq";
+import Features from "@/components/landing-page/features";
+import Footer from "@/components/landing-page/footer";
 import Header from "@/components/landing-page/header";
-import Waitlist from "@/components/landing-page/waitlist";
+import Hero from "@/components/landing-page/hero";
+import ImageSlide from "@/components/landing-page/image-comparison";
+import Ready from "@/components/landing-page/ready";
 
 export default function Home() {
 	return (
-		<main className="max-w-7xl mx-auto">
+		<main className="max-w-4xl mx-auto px-6">
 			{/* Header Section */}
 			<header>
 				<Header />
 			</header>
+			{/* Content Section */}
+			<section className="flex flex-col gap-32">
+				<Hero />
 
-			{/* Hero Section */}
-			<section
-				className="flex flex-col items-center justify-center text-center mt-12 md:mt-32 lg:mt-44 gap-4 md:gap-6 px-4"
-				aria-labelledby="hero-heading"
-			>
-				<h1 id="hero-heading" className="text-4xl md:text-7xl font-semibold">
-					Minimal Links. Maximum Impact.
-				</h1>
+				<ImageSlide />
 
-				<p className="max-w-2xl text-sm md:text-base text-muted-foreground">
-					B1o is an open-source, privacy-first link in bio app designed for
-					minimalism.
-				</p>
+				<Features />
 
-				{/* Waitlist Sign-up */}
-				<Waitlist />
+				<Content />
 
-				<p className="text-sm -mt-2 md:-mt-4 text-muted-foreground">
-					Sign up now to get early benefits.
-				</p>
+				<FAQ />
+
+				<Ready />
 			</section>
+			{/* Footer Section */}
+			<footer>
+				<Footer />
+			</footer>
 		</main>
 	);
 }

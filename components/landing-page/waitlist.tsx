@@ -9,7 +9,7 @@ import confetti from "canvas-confetti";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { BellRing, MailOpen } from "lucide-react";
+import { MailOpen, Send } from "lucide-react";
 
 // Validation schema using Zod
 const formSchema = z.object({
@@ -74,7 +74,7 @@ const Waitlist: React.FC = () => {
 		<Form {...form}>
 			<form
 				onSubmit={form.handleSubmit(handleFormSubmit)}
-				className="flex items-center gap-4"
+				className="flex items-center gap-3"
 			>
 				<FormField
 					control={form.control}
@@ -103,9 +103,10 @@ const Waitlist: React.FC = () => {
 						type="submit"
 						disabled={isSubmitting}
 						className="flex items-center"
+						size="icon"
+						variant="secondary"
 					>
-						<BellRing />
-						Join waitlist
+						<Send />
 					</Button>
 				</div>
 			</form>

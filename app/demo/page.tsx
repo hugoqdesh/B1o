@@ -64,8 +64,8 @@ export default function Page() {
 		<main className="flex flex-col items-center justify-center min-h-screen px-6">
 			<Card className="max-w-2xl w-full">
 				{/* Card header: User info and social links */}
-				<CardHeader className="flex md:flex-row items-center justify-between w-full">
-					<CardTitle className="flex gap-4 items-center">
+				<CardHeader className="flex flex-col md:flex-row items-center justify-between w-full">
+					<CardTitle className="flex flex-col md:flex-row gap-6 items-center">
 						{/* User Avatar */}
 						<Avatar className="h-18 w-18 md:h-22 md:w-22 rounded-full">
 							<AvatarImage src="/cat.jpg" alt="User profile image" />
@@ -73,7 +73,7 @@ export default function Page() {
 						</Avatar>
 
 						{/* User Name and Badges */}
-						<div className="flex flex-col gap-1">
+						<div className="flex flex-col gap-2">
 							<div className="flex gap-2 items-center">
 								<h2 className="text-2xl">hugoqdesh</h2>
 								<Badge variant="outline" className="rounded-full">
@@ -82,14 +82,14 @@ export default function Page() {
 									))}
 								</Badge>
 							</div>
-							<p className="text-muted-foreground font-medium text-sm">
+							<p className="text-muted-foreground font-medium text-sm text-center md:text-start">
 								My IP is 127.0.0.1
 							</p>
 						</div>
 					</CardTitle>
 
 					{/* Social links rendered with tooltips */}
-					<div className="flex items-center gap-3">
+					<div className="flex items-center gap-3 mt-4 md:mt-0">
 						{socialLinks.map((link) => (
 							<SocialLink
 								key={link.title}
