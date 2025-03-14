@@ -3,8 +3,6 @@
 import {
 	Award,
 	Binoculars,
-	ChartNoAxesCombined,
-	House,
 	LayoutPanelTop,
 	Link2,
 	UserRoundPen,

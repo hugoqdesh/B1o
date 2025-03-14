@@ -9,7 +9,7 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/select";
-import { MapPin, Pipette, Podcast, Type } from "lucide-react";
+import { Pipette, Podcast, Type } from "lucide-react";
 
 // Reusable component for an input field with a label and a left-side icon
 interface LabeledInputWithIconProps {

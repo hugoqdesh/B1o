@@ -1,12 +1,6 @@
 "use client";
 
-import {
-	ExternalLink,
-	HeartHandshake,
-	MessageSquareShare,
-	Settings,
-	Share2,
-} from "lucide-react";
+import { HeartHandshake, Settings, Share2 } from "lucide-react";
 import {
 	SidebarMenu,
 	SidebarMenuButton,
