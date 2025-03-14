@@ -1,6 +1,14 @@
 "use client";
 
-import { ChartNoAxesCombined, House, Link2, UserRoundPen } from "lucide-react";
+import {
+	Award,
+	Binoculars,
+	ChartNoAxesCombined,
+	House,
+	LayoutPanelTop,
+	Link2,
+	UserRoundPen,
+} from "lucide-react";
 import {
 	SidebarGroup,
 	SidebarGroupLabel,
@@ -11,14 +19,11 @@ import {
 import Link from "next/link";
 
 const links = [
-	{ title: "Dashboard", url: "/dashboard", icon: House },
-	{ title: "Links", url: "/dashboard/links", icon: Link2 },
+	{ title: "Overview", url: "/dashboard", icon: Binoculars },
+	{ title: "Badges", url: "/dashboard/badges", icon: Award },
 	{ title: "Customize", url: "/dashboard/customize", icon: UserRoundPen },
-	{
-		title: "Analytics",
-		url: "/dashboard/analytics",
-		icon: ChartNoAxesCombined,
-	},
+	{ title: "Links", url: "/dashboard/links", icon: Link2 },
+	{ title: "Templates", url: "/dashboard/templates", icon: LayoutPanelTop },
 ];
 
 export function NavMain() {

@@ -1,23 +1,3 @@
-import {
-	Discord,
-	Facebook,
-	GitHub,
-	Instagram,
-	Kickstarter,
-	Linkedin,
-	OnlyFans,
-	Pinterest,
-	Reddit,
-	Roblox,
-	Snapchat,
-	SoundCloud,
-	Spotify,
-	Steam,
-	TikTok,
-	Twitch,
-	X,
-	YouTube,
-} from "@/components/icons/social-icons";
 import { Button } from "@/components/ui/button";
 import {
 	Card,
@@ -39,28 +19,28 @@ import {
 	TooltipProvider,
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { PlusIcon } from "lucide-react";
+import {
+	Facebook,
+	Github,
+	Globe,
+	Instagram,
+	Linkedin,
+	PlusIcon,
+	Twitch,
+	Twitter,
+	Youtube,
+} from "lucide-react";
 
 // Mapping of social platform names to their icon components
 const socialIcons = {
-	Snapchat,
-	Discord,
-	YouTube,
-	GitHub,
+	Youtube,
 	Instagram,
-	TikTok,
-	Spotify,
-	SoundCloud,
-	Linkedin,
-	X,
-	Roblox,
+	Twitter,
+	Github,
 	Twitch,
-	Reddit,
-	OnlyFans,
-	Steam,
-	Kickstarter,
-	Pinterest,
+	Linkedin,
 	Facebook,
+	Globe,
 };
 
 // Renders an interactive social media icon that opens a dialog allowing the user to paste and link their social media profile
@@ -78,8 +58,8 @@ function SocialIconDialog({
 					<TooltipProvider>
 						<Tooltip>
 							<TooltipTrigger asChild>
-								<div className="bg-secondary hover:bg-primary/10 dark:bg-primary/80 hover:dark:bg-primary/60 flex items-center justify-center rounded-2xl w-max p-2 border-border border mx-auto cursor-pointer hover:-translate-y-1 transition duration-200">
-									<Icon className="w-10 h-10" />
+								<div className="bg- flex items-center justify-center rounded-2xl w-max p-2 mx-auto cursor-pointer transition duration-200">
+									<Icon className="w-8 h-8" />
 								</div>
 							</TooltipTrigger>
 							<TooltipContent>{name}</TooltipContent>
@@ -108,7 +88,7 @@ function SocialIconDialog({
 // Displays a grid of social media icons
 export default function LinksPage() {
 	return (
-		<main className="max-w-7xl mx-auto px-6 md:px-0">
+		<main className="max-w-7xl mx-auto px-6">
 			<Card>
 				<CardHeader>
 					<CardTitle>Link your social media profiles</CardTitle>
@@ -116,7 +96,7 @@ export default function LinksPage() {
 						Pick a social media to add to your profile.
 					</CardDescription>
 				</CardHeader>
-				<div className="grid grid-cols-3 md:grid-cols-9 items-center gap-y-12">
+				<div className="grid grid-cols-3 md:grid-cols-8 items-center gap-y-12">
 					{Object.entries(socialIcons).map(([name, Icon]) => (
 						<SocialIconDialog key={name} name={name} Icon={Icon} />
 					))}

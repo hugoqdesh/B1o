@@ -120,7 +120,7 @@ function AccountDeletionCard() {
 // Main SettingsPage component that composes the individual cards
 export default function SettingsPage() {
 	return (
-		<main className="flex flex-col items-center justify-center max-w-2xl mx-auto gap-10 px-6 md:px-0">
+		<main className="flex flex-col items-center justify-center max-w-2xl mx-auto gap-10 px-6">
 			<EditUsernameCard />
 			<SEOCard />
 			<AccountDeletionCard />

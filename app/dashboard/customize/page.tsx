@@ -79,11 +79,6 @@ function GeneralCustomizationCard() {
 					placeholder="This is my description"
 					Icon={Podcast}
 				/>
-				<LabeledInputWithIcon
-					label="Location"
-					placeholder="My Location"
-					Icon={MapPin}
-				/>
 				{/* Font selection uses a Select instead of a simple input */}
 				<div className="w-full flex flex-col gap-1">
 					<Label>Font</Label>
@@ -139,7 +134,7 @@ function ColorCustomizationCard() {
 // Composes the three customization cards into a single page layout
 export default function CustomizePage() {
 	return (
-		<main className="flex flex-col max-w-7xl mx-auto gap-12 px-6 md:px-0">
+		<main className="flex flex-col max-w-7xl mx-auto gap-12 px-6">
 			<AssetsUploaderCard />
 			<GeneralCustomizationCard />
 			<ColorCustomizationCard />

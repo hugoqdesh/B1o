@@ -11,14 +11,14 @@ import {
 // User type definition for better type safety
 interface User {
 	name: string;
-	email: string;
+	site: string;
 	avatar?: string;
 }
 
 const user: User = {
 	name: "demo",
-	email: "b1o.me/demo",
-	avatar: "/white.jpg", // Path to the user's avatar image
+	site: "b1o.me/hugoqdesh",
+	avatar: "/cat.jpg", // Path to the user's avatar image
 };
 
 export function NavUser() {
@@ -42,7 +42,7 @@ export function NavUser() {
 
 						<div className="flex items-center gap-0.5 text-muted-foreground truncate text-xs">
 							<Globe size={13} aria-hidden="true" />
-							<span>{user.email}</span>
+							<span>{user.site}</span>
 						</div>
 					</div>
 				</SidebarMenuButton>

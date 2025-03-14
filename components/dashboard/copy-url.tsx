@@ -27,7 +27,7 @@ const Copy: React.FC = () => {
 				id={id}
 				className="pe-9"
 				type="text"
-				defaultValue="b1o.me/demo"
+				defaultValue="b1o.me/hugoqdesh"
 				readOnly
 				aria-live="polite"
 			/>
